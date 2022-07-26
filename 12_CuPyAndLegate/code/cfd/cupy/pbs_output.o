@@ -1,0 +1,263 @@
+
+Lmod is automatically replacing "intel/19.1.1" with "nvhpc/22.2".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) ncarcompilers/0.5.0     2) netcdf/4.8.1     3) openmpi/4.1.1
+
+step11_perf_datamovement.py:84: RuntimeWarning: overflow encountered in square
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:84: RuntimeWarning: overflow encountered in multiply
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:84: RuntimeWarning: overflow encountered in true_divide
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:84: RuntimeWarning: invalid value encountered in subtract
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:85: RuntimeWarning: overflow encountered in square
+  ((self.v[2:, 1:-1] - self.v[0:-2, 1:-1]) / (2 * self.dy))**2))
+step11_perf_datamovement.py:85: RuntimeWarning: overflow encountered in subtract
+  ((self.v[2:, 1:-1] - self.v[0:-2, 1:-1]) / (2 * self.dy))**2))
+step11_perf_datamovement.py:85: RuntimeWarning: invalid value encountered in subtract
+  ((self.v[2:, 1:-1] - self.v[0:-2, 1:-1]) / (2 * self.dy))**2))
+step11_perf_datamovement.py:126: RuntimeWarning: overflow encountered in multiply
+  self.dt / (2 * self.rho * self.dx) * (self.p[1:-1, 2:] - self.p[1:-1, 0:-2]) +
+step11_perf_datamovement.py:126: RuntimeWarning: overflow encountered in subtract
+  self.dt / (2 * self.rho * self.dx) * (self.p[1:-1, 2:] - self.p[1:-1, 0:-2]) +
+step11_perf_datamovement.py:126: RuntimeWarning: invalid value encountered in subtract
+  self.dt / (2 * self.rho * self.dx) * (self.p[1:-1, 2:] - self.p[1:-1, 0:-2]) +
+step11_perf_datamovement.py:137: RuntimeWarning: overflow encountered in multiply
+  self.dt / (2 * self.rho * self.dy) * (self.p[2:, 1:-1] - self.p[0:-2, 1:-1]) +
+step11_perf_datamovement.py:137: RuntimeWarning: overflow encountered in subtract
+  self.dt / (2 * self.rho * self.dy) * (self.p[2:, 1:-1] - self.p[0:-2, 1:-1]) +
+step11_perf_datamovement.py:137: RuntimeWarning: invalid value encountered in subtract
+  self.dt / (2 * self.rho * self.dy) * (self.p[2:, 1:-1] - self.p[0:-2, 1:-1]) +
+step11_perf_datamovement.py:84: RuntimeWarning: overflow encountered in subtract
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:128: RuntimeWarning: invalid value encountered in subtract
+  (un[1:-1, 2:] - 2 * un[1:-1, 1:-1] + un[1:-1, 0:-2]) +
+step11_perf_datamovement.py:128: RuntimeWarning: invalid value encountered in add
+  (un[1:-1, 2:] - 2 * un[1:-1, 1:-1] + un[1:-1, 0:-2]) +
+step11_perf_datamovement.py:130: RuntimeWarning: invalid value encountered in subtract
+  (un[2:, 1:-1] - 2 * un[1:-1, 1:-1] + un[0:-2, 1:-1])))
+step11_perf_datamovement.py:130: RuntimeWarning: invalid value encountered in add
+  (un[2:, 1:-1] - 2 * un[1:-1, 1:-1] + un[0:-2, 1:-1])))
+step11_perf_datamovement.py:139: RuntimeWarning: invalid value encountered in subtract
+  (vn[1:-1, 2:] - 2 * vn[1:-1, 1:-1] + vn[1:-1, 0:-2]) +
+step11_perf_datamovement.py:139: RuntimeWarning: invalid value encountered in add
+  (vn[1:-1, 2:] - 2 * vn[1:-1, 1:-1] + vn[1:-1, 0:-2]) +
+step11_perf_datamovement.py:141: RuntimeWarning: invalid value encountered in subtract
+  (vn[2:, 1:-1] - 2 * vn[1:-1, 1:-1] + vn[0:-2, 1:-1])))
+step11_perf_datamovement.py:141: RuntimeWarning: invalid value encountered in add
+  (vn[2:, 1:-1] - 2 * vn[1:-1, 1:-1] + vn[0:-2, 1:-1])))
+
+Lmod is automatically replacing "intel/19.1.1" with "nvhpc/22.2".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) ncarcompilers/0.5.0     2) netcdf/4.8.1     3) openmpi/4.1.1
+
+step11_perf_datamovement.py:84: RuntimeWarning: overflow encountered in square
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:84: RuntimeWarning: overflow encountered in multiply
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:84: RuntimeWarning: overflow encountered in true_divide
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:84: RuntimeWarning: invalid value encountered in subtract
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:85: RuntimeWarning: overflow encountered in square
+  ((self.v[2:, 1:-1] - self.v[0:-2, 1:-1]) / (2 * self.dy))**2))
+step11_perf_datamovement.py:85: RuntimeWarning: overflow encountered in subtract
+  ((self.v[2:, 1:-1] - self.v[0:-2, 1:-1]) / (2 * self.dy))**2))
+step11_perf_datamovement.py:85: RuntimeWarning: invalid value encountered in subtract
+  ((self.v[2:, 1:-1] - self.v[0:-2, 1:-1]) / (2 * self.dy))**2))
+step11_perf_datamovement.py:126: RuntimeWarning: overflow encountered in multiply
+  self.dt / (2 * self.rho * self.dx) * (self.p[1:-1, 2:] - self.p[1:-1, 0:-2]) +
+step11_perf_datamovement.py:126: RuntimeWarning: overflow encountered in subtract
+  self.dt / (2 * self.rho * self.dx) * (self.p[1:-1, 2:] - self.p[1:-1, 0:-2]) +
+step11_perf_datamovement.py:126: RuntimeWarning: invalid value encountered in subtract
+  self.dt / (2 * self.rho * self.dx) * (self.p[1:-1, 2:] - self.p[1:-1, 0:-2]) +
+step11_perf_datamovement.py:137: RuntimeWarning: overflow encountered in multiply
+  self.dt / (2 * self.rho * self.dy) * (self.p[2:, 1:-1] - self.p[0:-2, 1:-1]) +
+step11_perf_datamovement.py:137: RuntimeWarning: overflow encountered in subtract
+  self.dt / (2 * self.rho * self.dy) * (self.p[2:, 1:-1] - self.p[0:-2, 1:-1]) +
+step11_perf_datamovement.py:137: RuntimeWarning: invalid value encountered in subtract
+  self.dt / (2 * self.rho * self.dy) * (self.p[2:, 1:-1] - self.p[0:-2, 1:-1]) +
+step11_perf_datamovement.py:84: RuntimeWarning: overflow encountered in subtract
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:128: RuntimeWarning: invalid value encountered in subtract
+  (un[1:-1, 2:] - 2 * un[1:-1, 1:-1] + un[1:-1, 0:-2]) +
+step11_perf_datamovement.py:128: RuntimeWarning: invalid value encountered in add
+  (un[1:-1, 2:] - 2 * un[1:-1, 1:-1] + un[1:-1, 0:-2]) +
+step11_perf_datamovement.py:130: RuntimeWarning: invalid value encountered in subtract
+  (un[2:, 1:-1] - 2 * un[1:-1, 1:-1] + un[0:-2, 1:-1])))
+step11_perf_datamovement.py:130: RuntimeWarning: invalid value encountered in add
+  (un[2:, 1:-1] - 2 * un[1:-1, 1:-1] + un[0:-2, 1:-1])))
+step11_perf_datamovement.py:139: RuntimeWarning: invalid value encountered in subtract
+  (vn[1:-1, 2:] - 2 * vn[1:-1, 1:-1] + vn[1:-1, 0:-2]) +
+step11_perf_datamovement.py:139: RuntimeWarning: invalid value encountered in add
+  (vn[1:-1, 2:] - 2 * vn[1:-1, 1:-1] + vn[1:-1, 0:-2]) +
+step11_perf_datamovement.py:141: RuntimeWarning: invalid value encountered in subtract
+  (vn[2:, 1:-1] - 2 * vn[1:-1, 1:-1] + vn[0:-2, 1:-1])))
+step11_perf_datamovement.py:141: RuntimeWarning: invalid value encountered in add
+  (vn[2:, 1:-1] - 2 * vn[1:-1, 1:-1] + vn[0:-2, 1:-1])))
+
+Lmod is automatically replacing "intel/19.1.1" with "nvhpc/22.2".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) ncarcompilers/0.5.0     2) netcdf/4.8.1     3) openmpi/4.1.1
+
+=>> PBS: job killed: walltime 993 exceeded limit 960
+
+Lmod is automatically replacing "intel/19.1.1" with "nvhpc/22.2".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) ncarcompilers/0.5.0     2) netcdf/4.8.1     3) openmpi/4.1.1
+
+step11_perf_datamovement.py:84: RuntimeWarning: overflow encountered in square
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:84: RuntimeWarning: overflow encountered in multiply
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:84: RuntimeWarning: overflow encountered in true_divide
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:84: RuntimeWarning: invalid value encountered in subtract
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:85: RuntimeWarning: overflow encountered in square
+  ((self.v[2:, 1:-1] - self.v[0:-2, 1:-1]) / (2 * self.dy))**2))
+step11_perf_datamovement.py:85: RuntimeWarning: overflow encountered in subtract
+  ((self.v[2:, 1:-1] - self.v[0:-2, 1:-1]) / (2 * self.dy))**2))
+step11_perf_datamovement.py:85: RuntimeWarning: invalid value encountered in subtract
+  ((self.v[2:, 1:-1] - self.v[0:-2, 1:-1]) / (2 * self.dy))**2))
+step11_perf_datamovement.py:126: RuntimeWarning: overflow encountered in multiply
+  self.dt / (2 * self.rho * self.dx) * (self.p[1:-1, 2:] - self.p[1:-1, 0:-2]) +
+step11_perf_datamovement.py:126: RuntimeWarning: overflow encountered in subtract
+  self.dt / (2 * self.rho * self.dx) * (self.p[1:-1, 2:] - self.p[1:-1, 0:-2]) +
+step11_perf_datamovement.py:126: RuntimeWarning: invalid value encountered in subtract
+  self.dt / (2 * self.rho * self.dx) * (self.p[1:-1, 2:] - self.p[1:-1, 0:-2]) +
+step11_perf_datamovement.py:137: RuntimeWarning: overflow encountered in multiply
+  self.dt / (2 * self.rho * self.dy) * (self.p[2:, 1:-1] - self.p[0:-2, 1:-1]) +
+step11_perf_datamovement.py:137: RuntimeWarning: overflow encountered in subtract
+  self.dt / (2 * self.rho * self.dy) * (self.p[2:, 1:-1] - self.p[0:-2, 1:-1]) +
+step11_perf_datamovement.py:137: RuntimeWarning: invalid value encountered in subtract
+  self.dt / (2 * self.rho * self.dy) * (self.p[2:, 1:-1] - self.p[0:-2, 1:-1]) +
+step11_perf_datamovement.py:84: RuntimeWarning: overflow encountered in subtract
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:128: RuntimeWarning: invalid value encountered in subtract
+  (un[1:-1, 2:] - 2 * un[1:-1, 1:-1] + un[1:-1, 0:-2]) +
+step11_perf_datamovement.py:128: RuntimeWarning: invalid value encountered in add
+  (un[1:-1, 2:] - 2 * un[1:-1, 1:-1] + un[1:-1, 0:-2]) +
+step11_perf_datamovement.py:130: RuntimeWarning: invalid value encountered in subtract
+  (un[2:, 1:-1] - 2 * un[1:-1, 1:-1] + un[0:-2, 1:-1])))
+step11_perf_datamovement.py:130: RuntimeWarning: invalid value encountered in add
+  (un[2:, 1:-1] - 2 * un[1:-1, 1:-1] + un[0:-2, 1:-1])))
+step11_perf_datamovement.py:139: RuntimeWarning: invalid value encountered in subtract
+  (vn[1:-1, 2:] - 2 * vn[1:-1, 1:-1] + vn[1:-1, 0:-2]) +
+step11_perf_datamovement.py:139: RuntimeWarning: invalid value encountered in add
+  (vn[1:-1, 2:] - 2 * vn[1:-1, 1:-1] + vn[1:-1, 0:-2]) +
+step11_perf_datamovement.py:141: RuntimeWarning: invalid value encountered in subtract
+  (vn[2:, 1:-1] - 2 * vn[1:-1, 1:-1] + vn[0:-2, 1:-1])))
+step11_perf_datamovement.py:141: RuntimeWarning: invalid value encountered in add
+  (vn[2:, 1:-1] - 2 * vn[1:-1, 1:-1] + vn[0:-2, 1:-1])))
+
+Lmod is automatically replacing "intel/19.1.1" with "nvhpc/22.2".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) ncarcompilers/0.5.0     2) netcdf/4.8.1     3) openmpi/4.1.1
+
+step11_perf_datamovement.py:84: RuntimeWarning: overflow encountered in square
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:84: RuntimeWarning: overflow encountered in multiply
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:84: RuntimeWarning: overflow encountered in true_divide
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:84: RuntimeWarning: invalid value encountered in subtract
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:85: RuntimeWarning: overflow encountered in square
+  ((self.v[2:, 1:-1] - self.v[0:-2, 1:-1]) / (2 * self.dy))**2))
+step11_perf_datamovement.py:85: RuntimeWarning: overflow encountered in subtract
+  ((self.v[2:, 1:-1] - self.v[0:-2, 1:-1]) / (2 * self.dy))**2))
+step11_perf_datamovement.py:85: RuntimeWarning: invalid value encountered in subtract
+  ((self.v[2:, 1:-1] - self.v[0:-2, 1:-1]) / (2 * self.dy))**2))
+step11_perf_datamovement.py:126: RuntimeWarning: overflow encountered in multiply
+  self.dt / (2 * self.rho * self.dx) * (self.p[1:-1, 2:] - self.p[1:-1, 0:-2]) +
+step11_perf_datamovement.py:126: RuntimeWarning: overflow encountered in subtract
+  self.dt / (2 * self.rho * self.dx) * (self.p[1:-1, 2:] - self.p[1:-1, 0:-2]) +
+step11_perf_datamovement.py:126: RuntimeWarning: invalid value encountered in subtract
+  self.dt / (2 * self.rho * self.dx) * (self.p[1:-1, 2:] - self.p[1:-1, 0:-2]) +
+step11_perf_datamovement.py:137: RuntimeWarning: overflow encountered in multiply
+  self.dt / (2 * self.rho * self.dy) * (self.p[2:, 1:-1] - self.p[0:-2, 1:-1]) +
+step11_perf_datamovement.py:137: RuntimeWarning: overflow encountered in subtract
+  self.dt / (2 * self.rho * self.dy) * (self.p[2:, 1:-1] - self.p[0:-2, 1:-1]) +
+step11_perf_datamovement.py:137: RuntimeWarning: invalid value encountered in subtract
+  self.dt / (2 * self.rho * self.dy) * (self.p[2:, 1:-1] - self.p[0:-2, 1:-1]) +
+step11_perf_datamovement.py:84: RuntimeWarning: overflow encountered in subtract
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:128: RuntimeWarning: invalid value encountered in subtract
+  (un[1:-1, 2:] - 2 * un[1:-1, 1:-1] + un[1:-1, 0:-2]) +
+step11_perf_datamovement.py:128: RuntimeWarning: invalid value encountered in add
+  (un[1:-1, 2:] - 2 * un[1:-1, 1:-1] + un[1:-1, 0:-2]) +
+step11_perf_datamovement.py:130: RuntimeWarning: invalid value encountered in subtract
+  (un[2:, 1:-1] - 2 * un[1:-1, 1:-1] + un[0:-2, 1:-1])))
+step11_perf_datamovement.py:130: RuntimeWarning: invalid value encountered in add
+  (un[2:, 1:-1] - 2 * un[1:-1, 1:-1] + un[0:-2, 1:-1])))
+step11_perf_datamovement.py:139: RuntimeWarning: invalid value encountered in subtract
+  (vn[1:-1, 2:] - 2 * vn[1:-1, 1:-1] + vn[1:-1, 0:-2]) +
+step11_perf_datamovement.py:139: RuntimeWarning: invalid value encountered in add
+  (vn[1:-1, 2:] - 2 * vn[1:-1, 1:-1] + vn[1:-1, 0:-2]) +
+step11_perf_datamovement.py:141: RuntimeWarning: invalid value encountered in subtract
+  (vn[2:, 1:-1] - 2 * vn[1:-1, 1:-1] + vn[0:-2, 1:-1])))
+step11_perf_datamovement.py:141: RuntimeWarning: invalid value encountered in add
+  (vn[2:, 1:-1] - 2 * vn[1:-1, 1:-1] + vn[0:-2, 1:-1])))
+
+Lmod is automatically replacing "intel/19.1.1" with "nvhpc/22.2".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) ncarcompilers/0.5.0     2) netcdf/4.8.1     3) openmpi/4.1.1
+
+step11_perf_datamovement.py:84: RuntimeWarning: overflow encountered in square
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:84: RuntimeWarning: overflow encountered in multiply
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:84: RuntimeWarning: overflow encountered in true_divide
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:84: RuntimeWarning: invalid value encountered in subtract
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:85: RuntimeWarning: overflow encountered in square
+  ((self.v[2:, 1:-1] - self.v[0:-2, 1:-1]) / (2 * self.dy))**2))
+step11_perf_datamovement.py:85: RuntimeWarning: overflow encountered in subtract
+  ((self.v[2:, 1:-1] - self.v[0:-2, 1:-1]) / (2 * self.dy))**2))
+step11_perf_datamovement.py:85: RuntimeWarning: invalid value encountered in subtract
+  ((self.v[2:, 1:-1] - self.v[0:-2, 1:-1]) / (2 * self.dy))**2))
+step11_perf_datamovement.py:126: RuntimeWarning: overflow encountered in multiply
+  self.dt / (2 * self.rho * self.dx) * (self.p[1:-1, 2:] - self.p[1:-1, 0:-2]) +
+step11_perf_datamovement.py:126: RuntimeWarning: overflow encountered in subtract
+  self.dt / (2 * self.rho * self.dx) * (self.p[1:-1, 2:] - self.p[1:-1, 0:-2]) +
+step11_perf_datamovement.py:126: RuntimeWarning: invalid value encountered in subtract
+  self.dt / (2 * self.rho * self.dx) * (self.p[1:-1, 2:] - self.p[1:-1, 0:-2]) +
+step11_perf_datamovement.py:137: RuntimeWarning: overflow encountered in multiply
+  self.dt / (2 * self.rho * self.dy) * (self.p[2:, 1:-1] - self.p[0:-2, 1:-1]) +
+step11_perf_datamovement.py:137: RuntimeWarning: overflow encountered in subtract
+  self.dt / (2 * self.rho * self.dy) * (self.p[2:, 1:-1] - self.p[0:-2, 1:-1]) +
+step11_perf_datamovement.py:137: RuntimeWarning: invalid value encountered in subtract
+  self.dt / (2 * self.rho * self.dy) * (self.p[2:, 1:-1] - self.p[0:-2, 1:-1]) +
+step11_perf_datamovement.py:84: RuntimeWarning: overflow encountered in subtract
+  (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
+step11_perf_datamovement.py:128: RuntimeWarning: invalid value encountered in subtract
+  (un[1:-1, 2:] - 2 * un[1:-1, 1:-1] + un[1:-1, 0:-2]) +
+step11_perf_datamovement.py:128: RuntimeWarning: invalid value encountered in add
+  (un[1:-1, 2:] - 2 * un[1:-1, 1:-1] + un[1:-1, 0:-2]) +
+step11_perf_datamovement.py:130: RuntimeWarning: invalid value encountered in subtract
+  (un[2:, 1:-1] - 2 * un[1:-1, 1:-1] + un[0:-2, 1:-1])))
+step11_perf_datamovement.py:130: RuntimeWarning: invalid value encountered in add
+  (un[2:, 1:-1] - 2 * un[1:-1, 1:-1] + un[0:-2, 1:-1])))
+step11_perf_datamovement.py:139: RuntimeWarning: invalid value encountered in subtract
+  (vn[1:-1, 2:] - 2 * vn[1:-1, 1:-1] + vn[1:-1, 0:-2]) +
+step11_perf_datamovement.py:139: RuntimeWarning: invalid value encountered in add
+  (vn[1:-1, 2:] - 2 * vn[1:-1, 1:-1] + vn[1:-1, 0:-2]) +
+step11_perf_datamovement.py:141: RuntimeWarning: invalid value encountered in subtract
+  (vn[2:, 1:-1] - 2 * vn[1:-1, 1:-1] + vn[0:-2, 1:-1])))
+step11_perf_datamovement.py:141: RuntimeWarning: invalid value encountered in add
+  (vn[2:, 1:-1] - 2 * vn[1:-1, 1:-1] + vn[0:-2, 1:-1])))

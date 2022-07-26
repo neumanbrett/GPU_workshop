@@ -1,0 +1,56 @@
+--- Cavity Flow Performance Test ---
+Dimension:  256 
+Timesteps:  500 
+CPU Run
+Computation Time:  13.05007820087485 
+Total Time:  13.05120522575453 
+
+--- Cavity Flow Performance Test ---
+Dimension:  256 
+Timesteps:  500 
+GPU Run
+Computation Time:  6.141538840020075 
+Total Time:  6.463662300026044 
+
+--- Cavity Flow Performance Test ---
+Dimension:  256 
+Timesteps:  1000 
+CPU Run
+Computation Time:  26.179898872040212 
+Total Time:  26.180917296092957 
+
+--- Cavity Flow Performance Test ---
+Dimension:  256 
+Timesteps:  1000 
+GPU Run
+Computation Time:  12.185925368918106 
+Total Time:  12.18669193610549 
+
+--- Cavity Flow Performance Test ---
+Dimension:  256 
+Timesteps:  2000 
+CPU Run
+Computation Time:  52.62566305580549 
+Total Time:  52.62669206690043 
+
+--- Cavity Flow Performance Test ---
+Dimension:  256 
+Timesteps:  2000 
+GPU Run
+Computation Time:  24.46623254707083 
+Total Time:  24.467027730075642 
+
+--- Cavity Flow Performance Test ---
+Dimension:  256 
+Timesteps:  500 
+CPU Run
+Computation Time:  13.097685429034755 
+Total Time:  13.098990899976343 
+
+--- Cavity Flow Performance Test ---
+Dimension:  256 
+Timesteps:  500 
+GPU Run
+Computation Time:  6.115790119161829 
+Total Time:  6.11634595412761 
+

@@ -1,0 +1,14 @@
+--- Cavity Flow Performance Test ---
+Dimension:  256 
+Timesteps:  4000 
+CPU Run
+Computation Time:  111.67325909994543 
+Total Time:  111.67485481034964 
+
+--- Cavity Flow Performance Test ---
+Dimension:  256 
+Timesteps:  4000 
+GPU Run
+Computation Time:  50.024022730998695 
+Total Time:  50.34832370933145 
+

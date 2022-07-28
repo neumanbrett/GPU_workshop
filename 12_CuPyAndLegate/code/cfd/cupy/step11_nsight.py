@@ -1,9 +1,7 @@
 # Implement Cavity Flow with Navier-Stokes
-
-from turtle import st
-import numpy as np
+#import numpy as np
 import cupy as cp
-from cupyx.profiler import benchmark
+from cupyx.profiler import time_range, benchmark
 from matplotlib import pyplot, cm
 from mpl_toolkits.mplot3d import Axes3D
 import time
@@ -26,11 +24,11 @@ class CavityFlow(object):
      
 
     """
-    def __init__(self, dims, timesteps, use_gpu=False):
+    def __init__(self, dims, timesteps):
         # Parameter Initialization
         self.n = dims
         self.nt = timesteps
-        self.use_gpu = use_gpu
+        #self.use_gpu = use_gpu
         self.nit = 50
         self.c = 1
         self.dx = 2 / (self.n-1)
@@ -41,24 +39,19 @@ class CavityFlow(object):
 
         self._init_params(self.n)
 
-
+    @time_range()
     def _init_params(self, n):
         # CuPy setup
-        if self.use_gpu:
-            xp = cp
-        else:
-            xp = np
-
-        self.x = xp.linspace(0, 2, n, dtype=xp.double)
-        self.y = xp.linspace(0, 2, n, dtype=xp.double)
-        self.X, self.Y = xp.meshgrid(self.x, self.y)
-        self.u = xp.zeros((n, n), dtype=xp.double)
-        self.v = xp.zeros((n, n), dtype=xp.double)
-        self.p = xp.zeros((n, n), dtype=xp.double)         
-        self.un = xp.empty_like(self.u, dtype=xp.double)
-        self.vn = xp.empty_like(self.v, dtype=xp.double)
-        self.pn = xp.empty_like(self.p, dtype=xp.double)
-        self.b = xp.zeros((n, n), dtype=xp.double)
+        self.x = cp.linspace(0, 2, n, dtype=cp.double)
+        self.y = cp.linspace(0, 2, n, dtype=cp.double)
+        self.X, self.Y = cp.meshgrid(self.x, self.y)
+        self.u = cp.zeros((n, n), dtype=cp.double)
+        self.v = cp.zeros((n, n), dtype=cp.double)
+        self.p = cp.zeros((n, n), dtype=cp.double)         
+        self.un = cp.empty_like(self.u, dtype=cp.double)
+        self.vn = cp.empty_like(self.v, dtype=cp.double)
+        self.pn = cp.empty_like(self.p, dtype=cp.double)
+        self.b = cp.zeros((n, n), dtype=cp.double)
 
 
     def plot(self):
@@ -74,7 +67,7 @@ class CavityFlow(object):
         pyplot.ylabel('Y')
         pyplot.title('Cavity Flow (NT = %i)' % self.nt)
 
-
+    @time_range()
     def _build_up_b(self): 
         self.b[1:-1, 1:-1] = (self.rho * (1 / self.dt * 
                              ((self.u[1:-1, 2:] - self.u[1:-1, 0:-2]) / 
@@ -84,7 +77,7 @@ class CavityFlow(object):
                              (self.v[1:-1, 2:] - self.v[1:-1, 0:-2]) / (2 * self.dx))-
                              ((self.v[2:, 1:-1] - self.v[0:-2, 1:-1]) / (2 * self.dy))**2))
 
-
+    @time_range()
     def _pressure_poisson(self):
         self.pn = self.p.copy()
         
@@ -105,15 +98,15 @@ class CavityFlow(object):
             # p = 0 at y = 2 
             self.p[-1, :] = 0
 
-
+    @time_range()
     def compute(self):
         #if (self.use_gpu):
         #    start_gpu = cp.cuda.Event()
         #    start_gpu.record()
         
         for n in range(self.nt):
-            un = self.u.copy()
-            vn = self.v.copy()
+            un = cp.copy(self.u)
+            vn = cp.copy(self.v)
             
             self._build_up_b()
             self._pressure_poisson()
@@ -156,92 +149,13 @@ class CavityFlow(object):
         #    end_gpu.synchronize()
 
 
-def launch_test(n, ts, use_gpu=False):
-    start_datamv = time.perf_counter()
-    flow = CavityFlow(n, ts, use_gpu)
-    end_datamv = time.perf_counter()
-    if (use_gpu):
-        #start_gpu = cp.cuda.Event()
-        #start_gpu.record()
-        start_gpu = time.perf_counter()
-        flow.compute()
-        end_gpu = time.perf_counter()
-        #end_gpu = cp.cuda.Event()
-        #end_gpu.record()
-        #end_gpu.synchronize()
-        t_gpu = end_gpu - start_gpu
-        total_time = (end_datamv - start_datamv) + t_gpu
-        print("--- Cavity Flow Performance Test ---")
-        print("Dimension: ", n, "\nTimesteps: ", ts, "\nGPU Run")
-        print("Computation Time: ", t_gpu, "\nTotal Time: ", total_time, "\n")
-    else:
-        start_cpu = time.perf_counter()
-        flow.compute()
-        end_cpu = time.perf_counter()
-        t_cpu = end_cpu - start_cpu
-        total_time = (end_datamv - start_datamv) + t_cpu
-        print("--- Cavity Flow Performance Test ---")
-        print("Dimension: ", n, "\nTimesteps: ", ts, "\nCPU Run")
-        print("Computation Time: ", t_cpu, "\nTotal Time: ", total_time, "\n")
+def launch_test(n, ts):
+    flow = CavityFlow(n, ts)
+    print(benchmark(flow.compute, n_repeat=5, n_warmup=2))
         
 
 if __name__ == "__main__":
-    # 41x41 Grid, 500 Timesteps
-    n = 32
-    ts = 100
-    launch_test(n, ts, use_gpu=False)
-    launch_test(n, ts, use_gpu=True)
-    
-    # 41x41 Grid, 500 Timesteps
-    n = 64
-    ts = 100
-    launch_test(n, ts, use_gpu=False)
-    launch_test(n, ts, use_gpu=True)
-
-    # 41x41 Grid, 500 Timesteps
+    # 128x128 Grid, 500 Timesteps
     n = 128
-    ts = 100
-    launch_test(n, ts, use_gpu=False)
-    launch_test(n, ts, use_gpu=True)
-
-    # 41x41 Grid, 500 Timesteps
-    n = 256
-    ts = 100
-    launch_test(n, ts, use_gpu=False)
-    launch_test(n, ts, use_gpu=True)
-
-    # 41x41 Grid, 500 Timesteps
-    n = 512
-    ts = 100
-    launch_test(n, ts, use_gpu=False)
-    launch_test(n, ts, use_gpu=True)
-
-    # 41x41 Grid, 500 Timesteps
-    n = 1024
-    ts = 100
-    launch_test(n, ts, use_gpu=False)
-    launch_test(n, ts, use_gpu=True)
-
-    # 41x41 Grid, 500 Timesteps
-    n = 2048
-    ts = 100
-    launch_test(n, ts, use_gpu=False)
-    launch_test(n, ts, use_gpu=True)
-
-    # 41x41 Grid, 500 Timesteps
-    n = 4096
-    ts = 100
-    launch_test(n, ts, use_gpu=False)
-    launch_test(n, ts, use_gpu=True)
-
-    # # 41x41 Grid, 500 Timesteps
-    # n = 8192
-    # ts = 200
-    # launch_test(n, ts, use_gpu=False)
-    # launch_test(n, ts, use_gpu=True)
-
-    # # 41x41 Grid, 500 Timesteps
-    # n = 16384
-    # ts = 200
-    # launch_test(n, ts, use_gpu=False)
-    # launch_test(n, ts, use_gpu=True)
+    ts = 500
+    launch_test(n, ts)
